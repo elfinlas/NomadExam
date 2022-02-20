@@ -1,0 +1,40 @@
+html,body {
+    width: 100%;
+    height: 100%;
+}
+.login_bt {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+  padding: 10px 30px 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.login_input {
+    width: 200px;
+        height: 30px;
+        margin-left: 10px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom : 1px solid rgb(111, 255, 101);
+        font-size: 16px;
+}
+
+#content_head_view {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    width: 100%;
+}
+
+#todo_view {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 40% 60%;
+}

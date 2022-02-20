@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sector 97</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <!-- Login View -->
+    <div id="login_div" style="text-align: center; ">
+        <h1 id="login_title">Login</h1>
+            <div style="border-radius: 25px;
+                border: 2px solid #73AD21;
+                padding: 20px;
+                width: 30%;
+                height: 200px; display: inline-block;"> 
+
+                <form id="loginForm">
+                    <p>
+                        <label for="userId">UserID</label>
+                        <input id="userId" class="login_input" type="text" placeholder="Input your Id" required>
+                    </p>
+                    
+                    <p>
+                        <label for="userPw">UserPw</label>
+                        <input id="userPw" class="login_input" type="password" placeholder="Input your password" required>
+                    </p>
+                    
+                    <button class="login_bt" style="margin-top: 20px;" >Login</button>
+
+                    <p>
+                        <a href="#" onclick="click4createNewAccountLink()" style="color: yellowgreen;">Create new account</a>
+                    </p>   
+                </form>
+
+                <form id="joinForm">
+                    <p>
+                        <label for="userId">Create ID</label>
+                        <input id="joinId" class="login_input" type="text" placeholder="Input your Id" required>
+                    </p>
+                    
+                    <p>
+                        <label for="userPw">Your Pw</label>
+                        <input id="joinPw" class="login_input" type="password" placeholder="Input your password" required>
+                    </p>
+                    
+                    <button class="login_bt" style="margin-top: 20px;" >Create Account</button>
+
+                    <p>
+                        <a href="#" onclick="click4LoginLink()" style="color: yellowgreen;">Login account</a>
+                    </p>   
+                </form>
+            </div>    
+    </div>
+    
+
+    <!-- Loading View -->
+    <div id="loading_div" style="position: absolute; left: 45%; top: 40%; transform: translate((-50%, -50%));">
+        <h1 style="font-size: 60px; color: rgb(255, 170, 0);">Loading...</h1>
+    </div>
+
+
+    <!-- Content View -->
+    <div id="content_view" style="height: 100%;">
+        <div id="content_background_view" style="height: 100%;  overflow:  auto;  z-index: -1; ">
+            <img id="content_background_img" 
+            style="width: 100%; height: 100%; position: absolute; object-fit: cover; opacity: 0.4;">
+
+            <!-- -->
+            <div id="content_head_view" style="z-index:2;">
+                <!-- Date View -->
+                <div style="padding-left:20px; padding-top: 15px; color: white;">
+                    <h1 id="now_date"></h1>
+                    <h2 id="now_time"></h2>
+                </div>
+        
+                <!-- User Info View -->
+                <div id="user_info_view" style="padding-top : 15px; text-align: center; color:white">
+                    <h1 id="welcome_title">안녕하세요</h1>
+                </div>
+        
+                <!-- weather & location  -->
+                <div style="color: white; text-align: right; margin-right: 15px;">
+                    <h1 id="location">-</h1>
+                    <h2 id="weather">-</h2>
+                </div>
+            </div>
+
+            <!-- -->
+            <div id="content_main_view" 
+                style="margin-left:10%; margin-right: 10%; color: white; height: 100%; z-index: 4; width: 100%;">
+
+                <h2 style="text-align: center;">To-Do List</h2>
+
+                <div id="todo_view">
+                    <div id="todo_input_view"> 
+                        <div style="border-radius: 25px;
+                            border: 2px solid #73AD21;
+                            width: 70%;
+                            height: 70px;  z-index: 5;"> 
+    
+                            <form id="todoForm" style="margin-left: 10px; position: relative;  z-index: 7;">
+                                <p>
+                                    <label for="todoInput">ToDo</label>
+                                    <input id="todoInput" class="login_input" type="text" placeholder="Todo...." required style=" z-index: 10;">
+                                    <button class="login_bt" >Enter</button>
+                                </p>                                           
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div id="todo_list_view" style="z-index: 10;"> 
+                        <ul id="todo_item_list">
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>  <!-- ./content_background_view  -->
+    </div> <!--./content_view -->
+
+
+    <script src="./js/utils.js"></script>
+    <script src="./js/account.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+
+</html>
+
+
+
+<!-- 
+    @TODO
+랜덤 배경 이미지  [0]
+실시간 시계 [0]
+로컬 스토리지를 사용한 로그인 [0]
+
+로컬 스토리지를 사용한 투두리스트
+날씨와 위치 (geolocation)
+
+여러분의 CSS 실력을 뽐내주세요💖
+
+-->
